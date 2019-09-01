@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a href="http://127.0.0.1:5678/">home</a>
+    <a href="http://127.0.0.1:5678/list">List all tasks</a>
+    <form action="/create" method="POST">
+        <div>
+            <label for="taskname">task name:</label>
+            <input type="text" name="taskname" id="taskname" placeholder="enter task name">
+        </div>
+        <div>
+            <label for="assign">assign to:</label>
+            <input type="text" name="assign" id="assign" placeholder="Assign to">
+        </div>
+        <div>
+            <label for="duedate">due date:</label>
+            <input type="date" name="duedate" id="duedate" placeholder="enter due date">
+        </div>
+        <div>
+            <label><input type="radio" name="status" id="status" value="InProgress">InProgress</label>
+            <label><input type="radio" name="status" id="status" value="Complete">Complete</label>
+        </div>
+        <div>
+            <label for="description">task description:</label>
+            <input type="text" name="description" id="description" placeholder="enter task description">
+        </div>
+        <div>
+           <input type="submit" value="SUBMIT">
+        </div>
+
+    </form>
+</body>
+
+</html>

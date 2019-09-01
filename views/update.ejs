@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update Task</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a href="http://127.0.0.1:5678/">home</a>
+    <table>
+        <thead>
+            <tr>
+                <td>TASK ID</td>
+                <td>NAME</td>
+                <td>ASSIGN</td>
+                <td>DUE DATE</td>
+                <td>STATUS</td>
+                <td>DESCRIPTION</td>
+            </tr>
+        </thead>
+        <% for(var i =0;i< db.length;i++){ %>
+        <tr>
+            <td><%= db[i]._id%></td>
+            <td><%= db[i].taskname%></td>
+            <td><%= db[i].assign%></td>
+            <td><%= db[i].duedate %></td>
+            <td><%= db[i].status%></td>
+            <td><%= db[i].description %></td>
+        </tr>
+
+        <% } %>
+        <tbody>
+        </tbody>
+    </table>
+    <form method="POST">
+        <div>
+            <label for="id">Task ID:</label>
+            <input type="text" id="id" name="id" placeholder="enter task id">
+        </div>
+        <div>
+            <label for="status">Status</label>
+            <input type="text" id="status" name="status" placeholder="enter task status">
+        </div>
+        <div>
+            <input type="submit" value="Update">
+        </div>
+
+    </form>
+</body>
+
+</html>
